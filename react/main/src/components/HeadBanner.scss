@@ -1,0 +1,168 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+@import "../styles/media.scss";
+
+.head-banner {
+  position: relative;
+  &__img {
+    position: relative;
+    background-image: url("../img/headbanner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: top;
+    background-size: cover;
+    height: 80vh;
+
+    .head-banner__content {
+      position: relative;
+      top: 50%;
+      right: 0;
+      transform: translateY(-60%);
+      margin: 0 0 0 15%;
+      .head-banner__title {
+        font-size: 120px;
+        font-weight: 500;
+        margin: 0 0 0 -8px;
+      }
+      .head-banner__description {
+        font-size: 40px;
+        font-weight: 300;
+        margin: 15px 0 25px 0;
+      }
+      .head-banner__social {
+        display: flex;
+        &__item {
+          margin: 0 8px;
+          transition: 0.45s ease 0s;
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+    .head-banner__btn {
+      position: absolute;
+      right: 0;
+      bottom: calc(-110px / 2);
+      display: block;
+      .head-banner__discover {
+        width: 345px;
+        height: 110px;
+        background-color: rgba(190, 225, 230, 1);
+        font-weight: 500;
+        @include center;
+        position: absolute;
+        bottom: 0;
+        right: 345px;
+        font-size: 18px;
+        transition: 0.4s ease 0s;
+        &:hover {
+          background-color: #eeff42;
+          cursor: pointer;
+        }
+      }
+      .head-banner__book {
+        @include center;
+        color: #fff;
+        width: 345px;
+        height: 110px;
+        background-color: rgba(37, 60, 87, 1);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 18px;
+        transition: 0.4s ease 0s;
+        &:hover {
+          background-color: rgba(190, 225, 230, 1);
+          color: $font-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .head-banner {
+    background-color: #e8eaec;
+    position: relative;
+    padding: 200px 0 0 0;
+
+    &__img {
+      height: 500px;
+      padding: 0 0 0 0;
+      background-position-y: bottom;
+      position: relative;
+      top: 0;
+      left: 0;
+      background-image: url("../img/head-banner-mod.webp");
+      background-size: cover;
+      background-position: center;
+
+      .head-banner__content {
+        position: relative;
+        top: -190px;
+        left: 0;
+        transform: translate(0);
+        margin: 0 0 50px 0;
+        .head-banner__title {
+          text-align: center;
+          font-size: 42px;
+        }
+        .head-banner__description {
+          text-align: center;
+          font-size: 22px;
+        }
+        .head-banner__social {
+          justify-content: center;
+        }
+      }
+      .head-banner__btn {
+        position: absolute;
+        right: 0;
+        bottom: -65px;
+        display: block;
+        width: 100%;
+        z-index: 1;
+        .head-banner__discover {
+          width: 50%;
+          height: 65px;
+          background-color: rgba(190, 225, 230, 1);
+          @include center;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          font-size: 18px;
+          transition: 0.4s ease 0s;
+          &:hover {
+            background-color: #eeff42;
+            cursor: pointer;
+          }
+        }
+        .head-banner__book {
+          @include center;
+          color: #fff;
+          width: 50%;
+          height: 65px;
+          background-color: rgba(37, 60, 87, 1);
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          font-size: 18px;
+          transition: 0.4s ease 0s;
+          &:hover {
+            background-color: rgba(190, 225, 230, 1);
+            color: $font-color;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .head-banner__img {
+    height: auto;
+  }
+}

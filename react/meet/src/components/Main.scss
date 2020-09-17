@@ -1,0 +1,508 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+@import "../styles/media.scss";
+
+.main {
+  .page-title {
+    width: 100%;
+    background-color: #e8eaec;
+    height: 225px;
+    font-size: 65px;
+    text-align: center;
+    @include center;
+    h1 {
+      font-weight: 400;
+    }
+  }
+
+  .fitness-trainer {
+    position: relative;
+    margin: 90px 0 90px 0;
+    height: calc(140px + 506px + 389px);
+    width: 1075px;
+    left: 50%;
+    transform: translateX(-70%);
+
+    @include center;
+    &__block1 {
+      width: 665px;
+      height: 506px;
+      background-color: #bee1e6;
+      position: absolute;
+      top: 0;
+      left: 24%;
+      z-index: 2;
+
+      .fitness-trainer__title {
+        padding: 95px 125px 0 125px;
+        font-weight: 400;
+        font-size: 29px;
+        margin: 0 0 20px 0;
+      }
+      .fitness-trainer__text {
+        p {
+          line-height: 28px;
+          font-size: 16px;
+          padding: 0 125px 0 125px;
+        }
+      }
+      .fitness-trainer__btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 246px;
+        height: 72px;
+        border: none;
+        background-color: #eeff42;
+        font-family: $font-family;
+        font-size: 17px;
+        transition: 250ms;
+        &:hover {
+          background-color: $font-color;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+    &__block2 {
+      position: absolute;
+      top: calc(506px - 246px);
+      left: 677px;
+      z-index: 1;
+    }
+    &__block3 {
+      width: 670px;
+      height: 389px;
+      background-color: #eeff42;
+      position: absolute;
+      top: calc(506px + 140px);
+      left: 28%;
+      .fitness-trainer__title {
+        padding: 95px 125px 0 125px;
+        font-weight: 400;
+        font-size: 29px;
+        margin: 0 0 20px 0;
+      }
+      .fitness-trainer__text {
+        p {
+          line-height: 28px;
+          font-size: 16px;
+          padding: 0 125px 0 125px;
+        }
+      }
+    }
+  }
+
+  .train-video {
+    video {
+      height: 712px;
+      width: 100%;
+      object-fit: cover;
+      margin: 0 0 -10px 0;
+    }
+  }
+  ///contact///
+  .contact {
+    &__row {
+      display: flex;
+      .contact__col-address {
+        flex: 40%;
+        background-color: #d3f1f5;
+        &__content {
+          margin: 115px auto 0 auto;
+          width: 70%;
+
+          .contact__address__title {
+            font-weight: 500;
+            font-size: 65px;
+            margin: 0 0 20px 0;
+          }
+          .contact__address__text {
+            font-size: 16px;
+          }
+          p {
+            margin: 0 0 20px 0;
+          }
+        }
+      }
+      .contact__col-form {
+        flex: 60%;
+        padding: 130px 140px 0 120px;
+
+        .contact-form {
+          display: flex;
+          width: 80%;
+          flex-wrap: wrap;
+          margin: 0 auto;
+
+          &__first-name {
+            flex: 40%;
+            height: 40px;
+            margin: 0 10px 0 10px;
+            border: none;
+            border-bottom: 2px solid #18293d;
+            font-family: $font-family;
+            padding: 10px;
+            &:focus {
+              border-bottom: 1px solid #18293d;
+              &::placeholder {
+                color: grey;
+              }
+            }
+          }
+          &__last-name {
+            flex: 40%;
+            height: 40px;
+            border: none;
+            margin: 0 10px 0 10px;
+            border-bottom: 2px solid #18293d;
+            font-family: $font-family;
+            padding: 10px;
+            &:focus {
+              border-bottom: 1px solid #18293d;
+              &::placeholder {
+                color: grey;
+              }
+            }
+          }
+          &__email {
+            flex: 40%;
+            margin: 40px 10px 0 10px;
+            height: 40px;
+            border: none;
+            border-bottom: 2px solid #18293d;
+            font-family: $font-family;
+            padding: 10px;
+            &:focus {
+              border-bottom: 1px solid #18293d;
+              &::placeholder {
+                color: grey;
+              }
+            }
+          }
+          &__subject {
+            flex: 40%;
+            height: 40px;
+            margin: 40px 10px 0 10px;
+            border: none;
+            border-bottom: 2px solid #18293d;
+            font-family: $font-family;
+            padding: 10px;
+            &:focus {
+              border-bottom: 1px solid #18293d;
+              &::placeholder {
+                color: grey;
+              }
+            }
+          }
+          &__text {
+            flex: 100%;
+            height: 90px;
+            margin: 40px 10px 0 10px;
+            border: none;
+            border-bottom: 2px solid #18293d;
+            font-family: $font-family;
+            padding: 10px;
+            &:focus {
+              outline: 0;
+              border-bottom: 1px solid #18293d;
+            }
+          }
+          &__btn {
+            margin: 35px 0 75px 0;
+            background-color: transparent;
+            border: none;
+            font-family: $font-family;
+            font-size: 24px;
+            width: 100%;
+            height: 55px;
+            @include center;
+            transition: 0.4s ease 0s;
+            &:hover {
+              cursor: pointer;
+              background-color: rgba(238, 255, 66, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1230px) {
+  .fitness-trainer {
+    .fitness-trainer__block1 {
+      width: calc(665px - 150px);
+      height: calc(506px - 150px);
+      .fitness-trainer__title {
+        padding: 25px 55px 0 55px;
+      }
+      .fitness-trainer__text {
+        p {
+          padding: 5px 55px 0 55px;
+          font-size: 14px;
+        }
+      }
+      .fitness-trainer__btn {
+        width: 146px;
+        height: 50px;
+        font-size: 15px;
+      }
+    }
+    .fitness-trainer__block2 {
+      left: 627px;
+      img {
+        width: 541px;
+      }
+    }
+    .fitness-trainer__block3 {
+      width: calc(670px - 150px);
+      height: calc(389px - 100px);
+      background-color: #eeff42;
+      position: absolute;
+      top: calc(506px + 76px);
+      left: 28%;
+      .fitness-trainer__title {
+        padding: 25px 55px 0 55px;
+      }
+      .fitness-trainer__text {
+        p {
+          padding: 5px 55px 0 55px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    .page-title {
+      font-size: 34px;
+      height: 150px;
+    }
+    .fitness-trainer {
+      display: flex;
+      flex-direction: column;
+      left: 0;
+      transform: translateX(0);
+      width: auto;
+      margin: 0;
+      height: auto;
+
+      .fitness-trainer__block1 {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        order: 2;
+        margin: -5px 0 0 0;
+
+        .fitness-trainer__title {
+          padding: 25px 55px 0 55px;
+        }
+        .fitness-trainer__text {
+          p {
+            padding: 5px 55px 0 55px;
+            font-size: 14px;
+          }
+        }
+        .fitness-trainer__btn {
+          width: 146px;
+          height: 50px;
+          font-size: 15px;
+          position: relative;
+          left: 0;
+          bottom: 0;
+          margin: 20px 55px;
+        }
+      }
+      .fitness-trainer__block2 {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        order: 1;
+        img {
+          width: 100%;
+
+          object-fit: cover;
+        }
+      }
+      .fitness-trainer__block3 {
+        order: 3;
+        width: 100%;
+        height: calc(389px - 100px);
+        background-color: #eeff42;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: -5px 0 0 0;
+        height: auto;
+        .fitness-trainer__title {
+          padding: 25px 55px 0 55px;
+        }
+        .fitness-trainer__text {
+          p {
+            padding: 5px 55px 15px 55px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .train-video {
+      video {
+        height: 320px;
+      }
+    }
+
+    .contact {
+      &__row {
+        display: flex;
+        flex-direction: column;
+        .contact__col-address {
+          flex: 100%;
+          background-color: #d3f1f5;
+          padding: 0 0 20px 0;
+          &__content {
+            margin: 55px auto 0 auto;
+            width: 90%;
+
+            .contact__address__title {
+              font-weight: 500;
+              font-size: 33px;
+              margin: 0 0 20px 0;
+            }
+            p {
+              margin: 0 0 20px 0;
+              font-size: 15px;
+            }
+          }
+        }
+        .contact__col-form {
+          flex: 100%;
+          padding: 20px 10px;
+          background-color: #f2f2f2;
+          font-size: 14px;
+
+          .contact-form {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            margin: 0 auto;
+
+            &__first-name {
+              font-size: 13px;
+              flex: 100%;
+              margin: 0 0 0 0;
+              height: 40px;
+              border: none;
+              background-color: transparent;
+              border-bottom: 2px solid #18293d;
+              font-family: $font-family;
+              padding: 10px;
+              &:focus {
+                border-bottom: 1px solid #18293d;
+                &::placeholder {
+                  color: grey;
+                }
+              }
+            }
+            &__last-name {
+              flex: 100%;
+              font-size: 13px;
+              background-color: transparent;
+              height: 40px;
+              border: none;
+              margin: 15px 0 0 0;
+              border-bottom: 2px solid #18293d;
+              font-family: $font-family;
+              padding: 10px;
+              &:focus {
+                border-bottom: 1px solid #18293d;
+                &::placeholder {
+                  color: grey;
+                }
+              }
+            }
+            &__email {
+              flex: 100%;
+              font-size: 13px;
+              background-color: transparent;
+              margin: 15px 0 0 0;
+              height: 40px;
+              border: none;
+              border-bottom: 2px solid #18293d;
+              font-family: $font-family;
+              padding: 10px;
+              &:focus {
+                border-bottom: 1px solid #18293d;
+                &::placeholder {
+                  color: grey;
+                }
+              }
+            }
+            &__subject {
+              flex: 100%;
+              height: 40px;
+              font-size: 13px;
+              background-color: transparent;
+              margin: 15px 0px 0 0;
+              border: none;
+              border-bottom: 2px solid #18293d;
+              font-family: $font-family;
+              padding: 10px;
+              &:focus {
+                border-bottom: 1px solid #18293d;
+                &::placeholder {
+                  color: grey;
+                }
+              }
+            }
+            &__text {
+              flex: 100%;
+              height: 90px;
+              font-size: 13px;
+              background-color: transparent;
+              margin: 15px 0 0 0;
+              border: none;
+              border-bottom: 2px solid #18293d;
+              font-family: $font-family;
+              padding: 10px;
+              &:focus {
+                outline: 0;
+                border-bottom: 1px solid #18293d;
+              }
+            }
+            &__btn {
+              margin: 35px 0 75px 0;
+              background-color: transparent;
+              border: none;
+              font-family: $font-family;
+              font-size: 24px;
+              width: 100%;
+              height: 55px;
+              @include center;
+              transition: 0.4s ease 0s;
+              &:hover {
+                cursor: pointer;
+                background-color: rgba(238, 255, 66, 1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .main {
+    .introducing {
+      height: 100vh;
+      .introducing__img {
+        height: 638px;
+      }
+    }
+  }
+}

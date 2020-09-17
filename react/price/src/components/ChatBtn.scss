@@ -1,0 +1,35 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+@import "../styles/media.scss";
+
+.chat-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $font-color;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  @include center;
+  z-index: 4;
+  svg {
+    height: 27px;
+    width: 27px;
+  }
+  &:hover {
+    cursor: pointer;
+    &:before {
+      content: "Btn for chat";
+      position: absolute;
+      top: -30px;
+      left: -40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .chat-btn {
+    right: 15px;
+    bottom: 15px;
+  }
+}

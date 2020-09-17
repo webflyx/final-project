@@ -1,0 +1,31 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+@import "../styles/media.scss";
+
+.footer {
+  background-color: rgba(238, 255, 66, 1);
+  height: 70px;
+  @include center;
+  &__text {
+    font-size: 14px;
+    a {
+      color: $font-color;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    background-color: rgba(238, 255, 66, 1);
+    height: 70px;
+    @include center;
+    &__text {
+      font-size: 14px;
+      text-align: center;
+      max-width: 80%;
+      a {
+        color: $font-color;
+      }
+    }
+  }
+}

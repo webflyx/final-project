@@ -1,0 +1,129 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+@import "../styles/media.scss";
+
+.log-window {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background-color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+
+  .log-window__close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+
+    &:before {
+      content: "";
+      width: 40px;
+      height: 1px;
+      position: absolute;
+      bottom: 50%;
+      right: 0;
+      background-color: #000;
+      transform: rotate(45deg);
+    }
+    &:after {
+      content: "";
+      width: 40px;
+      height: 1px;
+      position: absolute;
+      bottom: 50%;
+      right: 0;
+      background-color: #000;
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .log-window__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+    .log-window__title {
+      font-size: 48px;
+    }
+    .log-window__already {
+      font-size: 18px;
+      margin: 20px 0 40px 0;
+    }
+    .log-facebook {
+      width: 315px;
+      height: 50px;
+      border: none;
+      color: #fff;
+      font-family: $font-family;
+      margin: 0 0 20px 0;
+      background-color: #3f51b5;
+      transition: all 0.5s;
+      &:hover {
+        background-color: #3f51b5e0;
+        cursor: pointer;
+      }
+    }
+    .log-google {
+      width: 315px;
+      height: 50px;
+      border: none;
+      color: #fff;
+      font-family: $font-family;
+      margin: 0 0 20px 0;
+      background-color: #2196f3;
+      transition: all 0.5s;
+      &:hover {
+        background-color: #2196f3e0;
+        cursor: pointer;
+      }
+    }
+    .log-window__or {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 55%;
+        left: -110px;
+        width: 100px;
+        height: 1px;
+        background-color: rgba(128, 128, 128, 0.63);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 55%;
+        right: -110px;
+        width: 100px;
+        height: 1px;
+        background-color: rgba(128, 128, 128, 0.63);
+      }
+    }
+    .log-email {
+      margin: 40px 0 0 0;
+      border: 1px solid rgba(128, 128, 128, 0.63);
+      background-color: transparent;
+      width: 315px;
+      height: 50px;
+      font-family: $font-family;
+      transition: all 0.5s;
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #000;
+      }
+    }
+  }
+}
+.log-window_active {
+  visibility: visible;
+  opacity: 1;
+}
