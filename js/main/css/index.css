@@ -482,7 +482,7 @@ input[type=number] {
   /*********2*********/
 }
 .main .hello {
-  height: 100vh;
+  height: 950px;
   padding: 150px 0 0 0;
   position: relative;
 }
@@ -536,7 +536,7 @@ input[type=number] {
 }
 .main .introducing {
   position: relative;
-  height: 100vh;
+  height: 850px;
 }
 .main .introducing__img {
   background-image: url(../img/intr2.webp);
@@ -808,6 +808,16 @@ input[type=number] {
   color: #253c57;
 }
 
+@media screen and (max-width: 1480px) {
+  .hello__img {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .hello__content {
+    left: 200px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .top-btn {
     display: block;
